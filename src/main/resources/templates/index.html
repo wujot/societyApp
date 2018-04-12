@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:https="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+    <title>Society App</title>
+
+    <style>
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
+
+        h1 {
+            color: deepskyblue;
+            padding: 20px 20px 20px 20px;
+        }
+
+        .jumbotron {
+            height: 680px;
+            color: #fff;
+            padding: 100px 25px;
+            font-family: Montserrat, sans-serif;
+            font-size: 60px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .jumbotron p {
+            font-weight: bold;
+            padding-top: 250px;
+            color: cornflowerblue;
+        }
+
+        .jumbotron p span {
+            font-size: 60px;
+        }
+
+        .container-fluid {
+            padding: 60px 50px;
+        }
+
+        #top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .navbar {
+            -webkit-box-shadow: 0 8px 6px -6px #999;
+            -moz-box-shadow: 0 8px 6px -6px #999;
+            box-shadow: 0 8px 6px -6px #999;
+            background-color: deepskyblue;
+
+        }
+
+        .navbar-brand {
+            color: #fff;
+        }
+
+        .navbar-brand:hover {
+            color: deeppink;
+        }
+
+        .navbar-right ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-right li {
+            display: inline-block;
+        }
+
+        .navbar-right li a {
+            padding: 14px 16px;
+            text-decoration: none;
+            color: #fff;
+            border-bottom: 3px solid transparent;
+        }
+
+        .navbar-right li a:hover {
+            color: deeppink;
+            background-color: white;
+        }
+
+        .active {
+            color: #503716;
+            border-bottom: #503716;
+            border-bottom: 3px solid #503716;
+        }
+
+        #welcome h1 {
+            color: deeppink;
+            padding: 20px 20px 20px 20px;
+            font-size: 48px;
+        }
+
+        #welcome h3 {
+            color: deeppink;
+        }
+
+        .icon {
+            font-size: 200px;
+            color: deepskyblue;
+        }
+
+        .icon-small {
+            color: deepskyblue;
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+
+        #society h2 {
+            color: deepskyblue;
+        }
+
+        #society p{
+            color: deepskyblue;
+        }
+
+        #society h4 {
+            color: deeppink;
+        }
+
+    </style>
+
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<!-- Nav bar -->
+<div class="navbar" id="top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#j" style="font-weight: bold; font-size: 18px">SOCIETY</a>
+        </div>
+        <div class="nav navbar-nav navbar-right">
+            <ul>
+                <li><a href="/">HOMEPAGE</a></li>
+                <li><a href="#society">SOCIETY</a></li>
+                <li><a href="/register" th:href="@{/register}">SIGN UP</a></li>
+                <li><a href="/login" th:href="@{/loginForm}">LOGIN</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br/>
+<br/>
+<!-- Header -->
+<div class="jumbotron text-center" id="j" style="background-image: url(https://catracalivre.com.br/wp-content/uploads/2015/02/imagem-camp-oralidade.jpg); background-color: white">
+
+</div>
+
+<!-- Welcome -->
+<div id="welcome" class="container-fluid" style="background-color: #fff;">
+    <div align="center">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-user icon"></span>
+            </div>
+            <div class="col-sm-8">
+                <h1>Society</h1>
+                <h3>the place were you can meet the others.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Society -->
+<div class="container-fluid bg-grey offer text-center" id="society">
+    <h2>SOCIETY</h2>
+    <h4>Offers</h4>
+    <br>
+    <div class="row">
+        <div class="col-sm-4">
+            <span class=" 	glyphicon glyphicon-search icon-small"></span>
+            <h4>SEARCH</h4>
+            <p>Other members</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-user icon-small"></span>
+            <h4>Users</h4>
+            <p>Are waiting for you</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-envelope icon-small"></span>
+            <h4>Invite</h4>
+            <p>Sent them invitation</p>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-comment icon-small"></span>
+            <h4>Talk</h4>
+            <p>To talk</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-random icon-small"></span>
+            <h4>Connect</h4>
+            <p>With others</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-phone icon-small"></span>
+            <h4>Social</h4>
+            <p>In online environment</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid text-center">
+
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</body>

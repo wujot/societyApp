@@ -171,9 +171,7 @@
         </div>
         <div class="nav navbar-nav navbar-right">
             <ul>
-                <li><a href="/">HOMEPAGE</a></li>
-                <li><a href="/register" th:href="@{/register}">SIGN UP</a></li>
-                <li><a href="/loginForm" th:href="@{/loginForm}">LOGIN</a></li>
+                <li><a href="/account">BACK TO MY ACCOUNT</a></li>
             </ul>
         </div>
     </div>
@@ -188,26 +186,23 @@
         <div class="row">
             <div class="col-sm-4">
                 <div align="center" style="margin: auto">
-                    <span class="glyphicon glyphicon-check icon"></span>
+                    <span class="glyphicon glyphicon-user icon"></span>
                 </div>
             </div>
             <div class="col-sm-8">
-                <!-- Form -->
-                <div class="login" id="login">
-                    <h1>Login</h1>
-                    <form action="#" method="post" th:action="@{/processLogin}" style="width: 50%">
-
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" name="username">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" name="password">
-                        </div>
-                        <button type="submit" class="btn btn-default">Login</button>
-                    </form>
-                </div>
+                <h1>Other</h1>
+                <table class="table" style="text-align: center; width: 50%;">
+                    <tbody th:each="detail : ${user}">
+                    <tr>
+                        <td th:text="|Username:|"></td>
+                        <td th:text="*{detail.username}"></td>
+                    </tr>
+                    <tr>
+                        <td th:text="|Email:|"></td>
+                        <td th:text="*{detail.email}"></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

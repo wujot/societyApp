@@ -41,8 +41,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         .loginProcessingUrl("/processLogin")
                             .permitAll()
                     .and()
-                    .logout().logoutSuccessUrl("/login.html")
-                .and()
+                        .logout()    //logout configuration
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/login")
+                    .and()
                     .csrf();
     }
 
